@@ -1,5 +1,6 @@
 public class Node<N> {
-    private Node parent; // creating private varables to store in the node type
+    // variables
+    private Node parent; // creating private variables to store in the node type
     private Node child;
     private N data;
 
@@ -8,7 +9,7 @@ public class Node<N> {
 
     public void Node (N data){ // creating a data note constructor
         this.data = data;
-    }
+    } // creating a constructor to se the node data
 
     public void Node (Node parent, Node child, N data){ // creating a constructor to read in the variables
         this.parent = parent;
@@ -18,17 +19,42 @@ public class Node<N> {
 
     // methods
     // accessors
-
     public Node<N> getParent(){ // creating a get parent accessor method
-        return parent;
+        return parent; // accesing parent
     }
 
     public Node<N> getChild(){ // creating a get child accessor method
-        return child;
+        return child; // accessing child
     }
 
     public N getData(){ // creating a get data accessor method
-        return this.data;
+        return this.data; // accessing data
+    }
+
+    // mutators
+    public void setParent(Node parent){ // creating a mutator method for the parent variable
+        this.parent = parent; //setting parent
+    }
+
+    public void setChild(Node child){ // creating a mutator method for the child variable
+        this.child = child; // setting child
+    }
+
+    public void setData(N data){ // creating a mutator method for the data variable
+        this.data = data; // setting data
+    }
+
+    // other methods
+    public String toString(){ // creating a .toString method for the node class
+        return parent + ", " + child + ", " + data; // creating the format of the printes string
+    }
+
+    public boolean equals(Node node1, Node node2){ // creating an .equals method for the node class
+        if (node1.getData() == node2.getData()){ // checking if the data is equal
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
