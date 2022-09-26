@@ -15,20 +15,5 @@ public class Node<N> {
         this.child = child;
         this.data = data;
     }
-    // methods
-    // accessors
-
-    public Node<N> getParent(){
-        return parent;
-    }
-
-    public Node<N> getChild(){
-        return child;
-    }
-
-    public N getData(){
-        return this.data;
-    }
-
 
 }
