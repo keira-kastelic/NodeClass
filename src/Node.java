@@ -16,4 +16,19 @@ public class Node<N> {
         this.data = data;
     }
 
+    // methods
+    // accessors
+
+    public Node<N> getParent(){ // creating a get parent accessor method
+        return parent;
+    }
+
+    public Node<N> getChild(){ // creating a get child accessor method
+        return child;
+    }
+
+    public N getData(){ // creating a get data accessor method
+        return this.data;
+    }
+
 }
