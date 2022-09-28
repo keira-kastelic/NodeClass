@@ -49,8 +49,9 @@ public class Node<N> {
     }
 
     // other methods
-    public String toString(){ // creating a .toString method for the node class
-        return "Node = " + data; // creating the format of the printes string
+    public String toString() { // creating a .toString method for the node class
+        String print = ""+ data;
+        return print; // creating the format of the printes string
     }
 
     public boolean equals(Node node1, Node node2){ // creating an .equals method for the node class

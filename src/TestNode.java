@@ -18,6 +18,7 @@ public class TestNode {
         // testing the mutator methodsg
         n2.setData(7);
         n4.setParent(n2);
+        n2.setChild(n4);
         // testing the accessor methods
         System.out.println("getChild test = " + n2.getChild());
         System.out.println("getParent test = " + n1.getParent());
