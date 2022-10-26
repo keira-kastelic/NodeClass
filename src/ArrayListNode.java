@@ -1,4 +1,4 @@
-public class ArrayListNode {
+public class ArrayListNode<N> {
     private Node root; // creating instance variables
     private int length = 1;
 
@@ -22,6 +22,26 @@ public class ArrayListNode {
             temp = temp.getChild(); // updating the temp node
         }
         temp.setChild(bucket); // setting the node to its index
+    }
+    
+    public N remove(int index){ // creating a remove method
+        Node temp = root; // creating a temporary node
+        Node parent = root; // creating a node to store the parent of the temp
+        Node child = root; // creating a node to store the child of the temp
+        for (int i = 0; i <= index; i++){ // looping though to find the node at the index
+            temp = temp.getChild();
+        }
+        if (temp.getParent() != null && temp.getChild() != null){ // creating an if statement when the node has a parent and child
+            parent = temp.getParent(); // setting the parent to be the parent of the temp
+            child = temp.getChild(); // setting the child of temp to child
+            parent.setChild(child); // setting the new child of parent to child
+
+        } else if (temp.getChild() != null){ // creating an if statement if the node does not have a parent
+            temp.getParent().setChild(null);
+        } else if (temp.getParent() != null){
+            temp.getChild().setParent(null); // creating an if statement if the node does not have a child
+        }
+        return (N)temp.getData(); // returning the temp node data;
     }
 
 
